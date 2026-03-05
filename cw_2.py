@@ -2,10 +2,6 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 
-import pandas as pd
-import numpy as np
-import seaborn as sns
-
 # zad 1
 # a = np.arange(2, 42, 2)
 # print(a)
@@ -45,12 +41,15 @@ import seaborn as sns
 
 
 # zad 7
-n = int(input("Podaj liczbę całkowitą: "))
-def tab(n):
-    t = np.arange(1).reshape(n, n)
-    dd = np.fill_diagonal(t, 5)
-    return dd
-print('Tablica: \n',tab(n))
+# n = int(input("Podaj liczbę całkowitą: "))
+# def tab(n):
+#     t = np.zeros((n, n), dtype=int)
+#     for k in range(n):
+#         dd = (k + 1) * 2
+#         np.fill_diagonal(t[:, k:], dd)
+#         np.fill_diagonal(t[k:, :], dd)
+#     return t
+# print('Tablica: \n',tab(n))
 
 # zad 8
 
