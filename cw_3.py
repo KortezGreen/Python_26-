@@ -19,9 +19,9 @@ import matplotlib.pyplot as plt
 # zad 3
 # data = pd.read_excel("imiona.xlsx")
 # wynik = data.groupby(["Rok","Plec"])["Liczba"].sum().sort_index(ascending=False).head(10).groupby("Plec").sum()
-# wynik2= data[data["Rok"]>2012].groupby("Plec")["Liczba"]
+# wynik2 = data[data["Rok"]>data["Rok"].max()-5].groupby("Plec")["Liczba"]
 # print(wynik2)
-# wynik.plot(kind="pie",autopct="%.2f %%", ylabel="liczba urodzeń",title="Całkowita liczb urodzonych chłopców i dziewczynek w latach 2013-2017")
+# wynik.plot(kind="pie",autopct="%.2f %%", ylabel="liczba urodzeń",title="Całkowita liczb urodzonych chłopców i dziewczynek w ostatnich 5 latach")
 # plt.show()
 
 # zad 4
