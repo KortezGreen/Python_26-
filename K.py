@@ -1,5 +1,23 @@
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+
+arr=np.array([[0,1,2,3],[10,11,12,13],[40,41,42,43]])
+arr[:2, 1]= -3
+print(arr)
+sred = np.sum(arr>25)
+print(sred)
+arr[arr%2==0] = 0
+print(arr)
+mat = np.zeros((7, 7), dtype=int)
+
+np.fill_diagonal(mat, 3)
+np.fill_diagonal(mat[1:], -1)   # pod główną
+np.fill_diagonal(mat[:, 1:], -1)  # nad główną
+
+print(mat) 
+
+
 
 df = pd.read_csv('powtorzenie.csv', sep=';')
 #print(df)
