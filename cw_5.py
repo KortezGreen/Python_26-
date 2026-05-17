@@ -55,27 +55,38 @@ import pandas as pd
 
 #zad 6
 
-df = pd.read_excel("imiona.xlsx")
+# df=pd.read_excel('imiona.xlsx')
+# fig, ax = plt.subplots(1, 3, figsize=(12,5))
 
-plec_suma = df.groupby('Plec')['Liczba'].sum()
+# plec_suma = df.groupby('Plec')['Liczba'].sum()
 
-kobiety = df[df['Plec'] == 'K'].groupby('Rok')['Liczba'].sum()
-mezczyzni = df[df['Plec'] == 'M'].groupby('Rok')['Liczba'].sum()
+# girl = df[df['Plec'] == 'K'].groupby('Rok')['Liczba'].sum()
+# boy = df[df['Plec'] == 'M'].groupby('Rok')['Liczba'].sum()
 
-rocznie_suma = df.groupby('Rok')['Liczba'].sum()
+# rok_suma = df.groupby('Rok')['Liczba'].sum()
 
-fig, ax = plt.subplots(1, 3, figsize=(18, 5))
+# ax[0].bar(plec_suma.index,plec_suma.values,color=['red','green'])
+# ax[0].set_ylabel('Liczba narodzin')
+# ax[0].set_xlabel('Płeć')
 
-ax[0].bar(plec_suma.index, plec_suma.values, color=['red', 'green'])
-ax[0].set_ylabel('Liczba')
-ax[0].set_xlabel('Rok')
+# ax[1].plot(girl.index,girl.values, label='Kobiety', color='red')
+# ax[1].plot(boy.index,boy.values, label='Mężczyźni',color='green')
+# ax[1].set_xticks(girl.index[::1])
+# ax[1].tick_params(axis='x',labelsize=9, rotation=45)
 
-ax[1].plot(kobiety.index, kobiety.values, label='Kobiety', color='red')
-ax[1].plot(mezczyzni.index, mezczyzni.values, label='Mężczyźni', color='green')
-ax[1].legend()
+# ax[2].bar(rok_suma.index, rok_suma.values,color=['blue'])
+# ax[2].set_xticks(rok_suma.index[::1])
+# ax[2].tick_params(axis='x',labelsize=9, rotation=45)
 
-ax[2].bar(rocznie_suma.index, rocznie_suma.values, color='blue')
+# plt.tight_layout()
+# plt.show()
 
-
-plt.tight_layout()
-plt.show()
+#zad 7
+# df=pd.read_csv('zamowienia.csv', sep=';')
+# sumy = df.groupby('Sprzedawca')['Utarg'].sum()
+# plt.figure(figsize=( 16, 16))
+# plt.pie(sumy.values,labels=sumy.index, autopct='%1.1f%%')
+# plt.title('Wykres')
+# plt.legend()
+# plt.tight_layout()
+# plt.show()
